@@ -127,13 +127,17 @@ function getMostCommonAnimal(animals) {
   // determine initial value:
   // initial value that will return 'null' if there's no input.
   let aniCommon = null;
+  let highCount = 0;
   //decide which loop to use: for loop
   for (let i = 0; i < animals.length; i++) {
     // we set the animal variable equal to 'animals[i]' to access the elements in the
     // (cont'd) animals array:
     let animal = animals[i];
     // write statement that meets conditions of instructions above:
-    //if (animal.count === ?) 
+    if (animal.count > highCount) {
+      aniCommon = animal;
+      highCount = animal.count;
+    }
 
   }
   return aniCommon;
