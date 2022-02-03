@@ -26,7 +26,26 @@ const animals = [
  * getTotalCount(animals); //> 28
  * getTotalCount([]); //> 0 // returns 0 if the input array is empty
  */
-function getTotalCount(animals) {}
+function getTotalCount(animals) {
+  //determine initial value (Write return immediately).
+  // initial value that will return 0 if there's no inputs.
+  let aniCount = 0
+  //decide which loop to use: for loop
+  for (let i = 0; i < animals.length; i++) {
+    // accumulate: 
+    // we need to go through each object in the 'animals' array and access the value 
+    // (cont'd) of each key 'count' and return it's total value.
+    // we set the animal variable equal to 'animals[i]' to access the elements in the
+    // (cont'd) animals array:
+    let animal = animals[i];
+    // we set the 'aniCount' variable equal to it's initial value, then we add on
+    // (cont'd) the value we access from the key 'count' to the 'aniCount' value as 
+    // (cont'd) we loop through the array until we get the updated aniCount number. 
+    aniCount = aniCount + animal.count;
+  }
+
+  return aniCount;
+}
 
 /**
  * FUNCTION DESCRIPTION
@@ -40,7 +59,21 @@ function getTotalCount(animals) {}
  * getAllKinds(animals); //> ["Pig", "Cow", "Chicken", "Horse", "Dog", "Cat"]
  * getAllKinds([]); //> [] // returns empty array if input array is empty
  */
-function getAllKinds(animals) {}
+function getAllKinds(animals) {
+  // determine initial value:
+  // initial value that will return empty array if there's no inputs.
+  let aniKind = [];
+  //decide which loop to use: for loop
+  for (let i = 0; i < animals.length; i++) {
+  // we need to access the 'animals' array to get the value from the key 'kind'
+  // (cont'd) from each object and return it into an updated array:
+  let animal = animals[i];
+  // 'aniKind.push()' takes each accessed element and puts it into the updated array.
+  aniKind.push(animal.kind);
+
+  }
+  return aniKind;
+}
 
 /**
  * FUNCTION DESCRIPTION
@@ -59,7 +92,24 @@ function getAllKinds(animals) {}
   ];
  * filterByCountMinimum([], 3); //> [] // returns empty array if input array is empty
  */
-function filterByCountMinimum(animals, minimum) {}
+function filterByCountMinimum(animals, minimum) {
+  // determine initial value:
+  // initial value that will return empty array if there's no inputs.
+  let aniFilter = [];
+  //decide which loop to use: for loop
+  for (let i = 0; i < animals.length; i++) {
+    // we set the animal variable equal to 'animals[i]' to access the elements in the
+    // (cont'd) animals array:
+    let animal = animals[i];
+    // write statement that meets conditions of instructions above:
+    if (animal.count >= minimum) {
+      // makes it so that when above condition is met, each object that satisfies it
+      // (cont'd) will be put into the updated array with the .push() method.
+      aniFilter.push(animal);
+    }
+  }
+  return aniFilter;
+}
 
 /**
  * FUNCTION DESCRIPTION
@@ -73,7 +123,21 @@ function filterByCountMinimum(animals, minimum) {}
  * getMostCommonAnimal(animals); //> { kind: "Chicken", count: 11 }
  * getMostCommonAnimal([]); //> null // returns null if the input is empty
  */
-function getMostCommonAnimal(animals) {}
+function getMostCommonAnimal(animals) {
+  // determine initial value:
+  // initial value that will return 'null' if there's no input.
+  let aniCommon = null;
+  //decide which loop to use: for loop
+  for (let i = 0; i < animals.length; i++) {
+    // we set the animal variable equal to 'animals[i]' to access the elements in the
+    // (cont'd) animals array:
+    let animal = animals[i];
+    // write statement that meets conditions of instructions above:
+    //if (animal.count === ?) 
+
+  }
+  return aniCommon;
+}
 
 // Do not change anything below this line.
 module.exports = {
